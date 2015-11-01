@@ -9,7 +9,8 @@ export default class Header extends Component {
         <Navigation />
         <div>
           <div className="page-header">
-            <h1>Example page header <small>Subtext for header</small></h1>
+            <h1>Smsl <small> instant message </small></h1>
+            <h3> Send Messages Simultaneously to Twitter and Facebook </h3>
           </div>
         </div>
       </div>
