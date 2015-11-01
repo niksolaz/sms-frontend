@@ -10,7 +10,7 @@ export default class Header extends Component {
         <div>
           <div className="page-header">
             <h1>
-              <img className="responsive-Logo-header" alt="Smsl" src="img/Icon.png" />
+              <img src="img/Icon.png" />
               Smsl <small> instant message </small>
             </h1>
             <h3> Send Messages Simultaneously to Twitter and Facebook </h3>
