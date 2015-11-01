@@ -13,7 +13,7 @@ export default class Navigation extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#"><img alt="Brand" src="img/Slice.png"></a>
+              <a className="navbar-brand" href="#"><img alt="Brand" src="img/Slice.png" /></a>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
