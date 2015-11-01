@@ -6,8 +6,12 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <Navigation color="red"/>
-        <div> This is the header </div>
+        <Navigation />
+        <div>
+          <div className="page-header">
+            <h1>Example page header <small>Subtext for header</small></h1>
+          </div>
+        </div>
       </div>
     );
   }
