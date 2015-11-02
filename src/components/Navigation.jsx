@@ -44,14 +44,11 @@ export default class Navigation extends Component {
               </form>
             </div>
           </div>
+          
+          
+          
+          
           <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
-              
-              <ol className="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-            
               
               <div className="carousel-inner" role="listbox">
                 <div className="item active">
@@ -66,10 +63,8 @@ export default class Navigation extends Component {
                     for Facebook
                   </div>
                 </div>
-                ...for other
               </div>
             
-              
               <a className="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span className="sr-only">Previous</span>
@@ -79,6 +74,9 @@ export default class Navigation extends Component {
                 <span className="sr-only">Next</span>
               </a>
             </div>
+            
+            
+            
         </nav>
       </div>
     );
