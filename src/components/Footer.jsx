@@ -5,10 +5,15 @@ export default class Footer extends Component {
     return (
       <div>
         <div className="panel panel-default">
-          <div className="panel-body">
-            ...
+          <div className="panel-footer">
+            <div className="panel-body">
+              <ol className="page-list-Footer">
+                <li><a href="#">MY GITHUB</a></li>
+                <li><a href="#">MY FACEBOOK</a></li>
+                <li><a href="#">MY TWITTER</a></li>
+              </ol>
+            </div>
           </div>
-          <div className="panel-footer">Panel footer</div>
         </div>
       </div>
     );
