@@ -49,13 +49,13 @@ export default class Navigation extends Component {
           
           
           <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <ol className="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" clasName="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
               </ol>
-              
-              <div class="carousel-inner" role="listbox">
+
+              <div className="carousel-inner" role="listbox">
                 <div className="item active">
                   <img src="http://i.telegraph.co.uk/multimedia/archive/03375/twitter2_3375790k.jpg"/>
                   <div className="carousel-caption">
@@ -63,7 +63,7 @@ export default class Navigation extends Component {
                   </div>
                 </div>
                 <div className="item">
-                  <img src="http://i.telegraph.co.uk/multimedia/archive/03375/twitter2_3375790k.jpg"/>
+                  <img src="http://st.ilfattoquotidiano.it/wp-content/uploads/2015/05/facebook-6751.jpg"/>
                   <div className="carousel-caption">
                     for Facebook
                   </div>
@@ -79,7 +79,6 @@ export default class Navigation extends Component {
                 <span className="sr-only">Next</span>
               </a>
             </div>
-            
             
             
         </nav>
