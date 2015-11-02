@@ -27,16 +27,16 @@ export default class Header extends Component {
                 <div className="item active">
                   <img src="http://i.telegraph.co.uk/multimedia/archive/03375/twitter2_3375790k.jpg"/>
                   <div className="carousel-caption">
-                    ...etc etc
+                   for Twitter
                   </div>
                 </div>
-                <div className="item">
+                <div className="item active">
                   <img src="http://st.ilfattoquotidiano.it/wp-content/uploads/2015/05/facebook-6751.jpg"/>
                   <div className="carousel-caption">
-                    ...etc
+                    for Facebook
                   </div>
                 </div>
-                ...other
+                ...for other
               </div>
             
               
