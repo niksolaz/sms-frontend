@@ -25,18 +25,18 @@ export default class Header extends Component {
               
               <div className="carousel-inner" role="listbox">
                 <div className="item active">
-                  <img src="img/Custom.png"/>
+                  <img src="http://i.telegraph.co.uk/multimedia/archive/03375/twitter2_3375790k.jpg"/>
                   <div className="carousel-caption">
-                    ...
+                    ...etc etc
                   </div>
                 </div>
                 <div className="item">
-                  <img src="img/Custom.png"/>
+                  <img src="http://st.ilfattoquotidiano.it/wp-content/uploads/2015/05/facebook-6751.jpg"/>
                   <div className="carousel-caption">
-                    ...
+                    ...etc
                   </div>
                 </div>
-                ...
+                ...other
               </div>
             
               
