@@ -14,10 +14,10 @@ export default class Header extends Component {
               Smsl <small> instant message </small>
             </h1>
             <h3> Send Messages Simultaneously to Twitter and Facebook </h3>
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
               
               <ol className="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
               </ol>
@@ -30,7 +30,7 @@ export default class Header extends Component {
                    for Twitter
                   </div>
                 </div>
-                <div className="item active">
+                <div className="item">
                   <img src="http://st.ilfattoquotidiano.it/wp-content/uploads/2015/05/facebook-6751.jpg"/>
                   <div className="carousel-caption">
                     for Facebook
