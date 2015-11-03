@@ -6,7 +6,7 @@ import MainBody from './components/MainBody.jsx';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
           <Header />
           <MainBody />
           <Footer />
