@@ -6,7 +6,7 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <div className="pagination pagination-right">
+        <div>
           <div className="page-header">
             <h1>
               <img src="img/Custom.png" />
