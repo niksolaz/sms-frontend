@@ -15,19 +15,44 @@ export default class Header extends Component {
             </h1>
             <h3> Send Messages Simultaneously to Twitter and Facebook </h3>
           </div>
-          <div id="myCarousel" className="carousel slide">
-            <ol className="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
+           
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
-            <div className="carousel-inner">
-              <div className="active item"><img src="http://4.bp.blogspot.com/-ucEWV55BuAQ/VLA8kQTp61I/AAAAAAAAahw/4Sgbe1q8RhM/s1600/ricevere%2Bsms.png" alt="...">…</div>
-              <div className="item"><img src="http://www.dirittodicritica.com/wp-content/uploads/2015/09/facebook1.jpg" alt="...">…</div>
-              <div className="item"><img src="http://www.finzionimagazine.it/wp-content/uploads/2015/07/twitter-ipo_.jpg" alt="...">…</div>
+          
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="http://4.bp.blogspot.com/-ucEWV55BuAQ/VLA8kQTp61I/AAAAAAAAahw/4Sgbe1q8RhM/s1600/ricevere%2Bsms.png" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+              <div class="item">
+                <img src="http://www.dirittodicritica.com/wp-content/uploads/2015/09/facebook1.jpg" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
+              <div class="item">
+                <img src="http://www.finzionimagazine.it/wp-content/uploads/2015/07/twitter-ipo_.jpg" alt="...">
+                <div class="carousel-caption">
+                  ...
+                </div>
+              </div>
             </div>
-            <a className="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a className="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
         </div>
       </div>
