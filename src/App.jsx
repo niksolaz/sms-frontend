@@ -7,7 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div class="pagination pagination-centered">
+        <div className="pagination pagination-centered">
           <Header />
           <MainBody />
           <Footer />
