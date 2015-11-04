@@ -7,7 +7,7 @@ export default class Header extends Component {
     return (
       <div>
         <Navigation />
-        <div>
+        <div className="text-center">
           <div className="page-header">
             <h1>
               <img src="img/Custom.png" />
