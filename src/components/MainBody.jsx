@@ -5,8 +5,8 @@ export default class MainBody extends Component {
     return (
       <div>
         <div className="jumbotron">
-          <h1 className="text-h1">Welcome on Smsl!</h1>
-          <p className="text-h1">This web application allows you to send a single message simultaneously to the major social networks.</p>
+          <h1 className="text-center">Welcome on Smsl!</h1>
+          <p className="text-center">This web application allows you to send a single message simultaneously to the major social networks.</p>
           <section>
           
           </section>
