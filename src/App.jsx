@@ -8,9 +8,9 @@ export default class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-4"><Header /></div>
-          <div className="col-md-4"><MainBody /></div>
-          <div className="col-md-4"><Footer /></div>
+          <div className="row-md-4"><Header /></div>
+          <div className="row-md-4"><MainBody /></div>
+          <div className="row-md-4"><Footer /></div>
         </div>
       </div>
     );
