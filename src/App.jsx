@@ -7,11 +7,11 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row">
-          <div className="row-md-4"><Header /></div>
-          <div className="row-md-4"><MainBody /></div>
-          <div className="row-md-4"><Footer /></div>
-        </div>
+        
+          <Header />
+          <MainBody />
+          <Footer />
+        
       </div>
     );
   }
