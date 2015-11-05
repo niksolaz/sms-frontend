@@ -7,10 +7,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="container">
-        <div class="row">
-          <div class="col-md-2"><Header /></div>
-          <div class="col-md-8"><MainBody /></div>
-          <div class="col-md-2"><Footer /></div>
+        <div className="row">
+          <div className="col-md-2"><Header /></div>
+          <div className="col-md-8"><MainBody /></div>
+          <div className="col-md-2"><Footer /></div>
         </div>
       </div>
     );
