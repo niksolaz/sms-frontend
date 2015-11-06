@@ -11,7 +11,7 @@ export default class App extends Component {
           <Header />
           <MainBody />
           <Footer />
-        </div>
+        
       </div>
     );
   }
