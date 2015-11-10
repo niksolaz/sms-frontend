@@ -6,12 +6,10 @@ import MainBody from './components/MainBody.jsx';
 export default class App extends Component {
   render() {
     return (
-      <div className="container">
-        
+      <div>
           <Header />
           <MainBody />
           <Footer />
-        
       </div>
     );
   }

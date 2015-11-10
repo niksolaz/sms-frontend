@@ -5,7 +5,7 @@ export default class HomePage extends Component {
         return(
             <div>
                 <textarea></textarea>
-                <button></button>
+                <button>Send</button>
             </div>
         );
     }
