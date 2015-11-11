@@ -7,7 +7,7 @@ export default class FacebookPage extends Component {
                 <div className='FacebookContainer'>
                     facebook
                     <textarea></textarea>
-                    <div className='SignUpContainer'>
+                    <div className='FacebookSignUpContainer'>
                         <table>
                             <tr>
                                 <th>singleSignUp</th>
@@ -16,7 +16,7 @@ export default class FacebookPage extends Component {
                         </table>
                         <div><navbar></navbar></div>
                     </div>
-                    <div className='TotalContainerFB'>
+                    <div className='FacebookTotalContainer'>
                         <table>
                             <th>totalSignUp</th>
                             <th>totalLikeValue</th>
