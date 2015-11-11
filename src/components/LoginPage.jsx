@@ -6,9 +6,15 @@ export default class LoginPage extends Component {
             <div>
                 <div className='LoginContainer'>
                     <form>
-                    <input type="text" name="Email">Email</input><br/>
-                    <input type="text" name="Password">Password</input><br/>
-                    <input type="submit" value="Submit">GO!</input>
+                        <fieldset>
+                        <legend>Login:</legend>
+                            Email:<br/>
+                            <input type="text" name="email"></input>
+                            <br/>
+                            Password:<br/>
+                            <input type="password" name="psw"></input>
+                            <input>GO!</input>
+                        </fieldset>
                     </form>
                 </div>
             </div>
