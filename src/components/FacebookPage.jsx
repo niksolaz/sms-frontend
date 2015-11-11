@@ -8,17 +8,19 @@ export default class FacebookPage extends Component {
                     facebook
                     <textarea></textarea>
                     <div className='SignUpContainer'>
-                        <section>
-                            <p>singleSignUp</p>
-                            <div>likeValue</div>
-                        </section>
+                        <table>
+                            <tr>
+                                <th>singleSignUp</th>
+                                <th>likeValue</th>
+                            </tr>
+                        </table>
                         <div><navbar></navbar></div>
                     </div>
-                    <div>
-                        <section>
-                            <p>totalSignUp</p>
-                            <div>totalLikeValue</div>
-                        </section>
+                    <div className='TotalContainerFB'>
+                        <table>
+                            <th>totalSignUp</th>
+                            <th>totalLikeValue</th>
+                        </table>
                     </div>
                 </div>
             </div>
