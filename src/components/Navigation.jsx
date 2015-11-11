@@ -6,15 +6,16 @@ export default class Navigation extends Component {
     return (
       <div>
         <div className='NavigationContainer'>
-          <a>Home</a>
-          <a>Facebook</a>
-          <a>Twitter</a>
+          <a href="./HomePage.jsx">Home</a>
+          <a href="./FacebookPage.jsx">Facebook</a>
+          <a href="./TwitterPage.jsx">Twitter</a>
           <form>
             Search:
             <input type="search" name="search"></input>
           </form>
-          <a>Login</a>
-          <a>Sign Up</a>
+          <a href="./LoginPage.jsx">Login</a>
+          <div><img /></div>
+          <a href="./LoginPage.jsx">Sign Up</a>
         </div>
       </div>
     );
