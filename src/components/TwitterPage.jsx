@@ -4,7 +4,23 @@ export default class TwitterPage extends Component {
     render (){
         return(
             <div>
-            
+                <div className='TwitterContainer'>
+                    Twitter
+                    <textarea></textarea>
+                    <div className='SignUpContainer'>
+                        <section>
+                            <p>singleSignUp</p>
+                            <div>likeValue</div>
+                        </section>
+                        <div><navbar></navbar></div>
+                    </div>
+                    <div>
+                        <section>
+                            <p>totalSignUp</p>
+                            <div>totalLikeValue</div>
+                        </section>
+                    </div>
+                </div>
             </div>
         );
     }
