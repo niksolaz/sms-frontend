@@ -7,18 +7,20 @@ export default class TwitterPage extends Component {
                 <div className='TwitterContainer'>
                     Twitter
                     <textarea></textarea>
-                    <div className='SignUpContainer'>
-                        <section>
-                            <p>singleSignUp</p>
-                            <div>likeValue</div>
-                        </section>
+                    <div className='TwitterSignUpContainer'>
+                        <table>
+                            <tr>
+                                <th>singleSignUp</th>
+                                <th>likeValue</th>
+                            </tr>
+                        </table>
                         <div><navbar></navbar></div>
                     </div>
-                    <div>
-                        <section>
-                            <p>totalSignUp</p>
-                            <div>totalLikeValue</div>
-                        </section>
+                    <div className='TwitterTotalContainer'>
+                        <table>
+                            <th>totalSignUp</th>
+                            <th>totalLikeValue</th>
+                        </table>
                     </div>
                 </div>
             </div>
