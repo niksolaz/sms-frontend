@@ -5,19 +5,19 @@ export default class FacebookPage extends Component {
         return(
             <div>
                 <div className='FacebookContainer'>
-                    {facebook}
+                    facebook
                     <textarea></textarea>
                     <div className='SignUpContainer'>
                         <section>
-                            <p>{singleSignUp}</p>
-                            <div>{likeValue}</div>
+                            <p>singleSignUp</p>
+                            <div>likeValue</div>
                         </section>
                         <div><navbar></navbar></div>
                     </div>
                     <div>
                         <section>
-                            <p>{totalSignUp}</p>
-                            <div>{totalLikeValue}</div>
+                            <p>totalSignUp</p>
+                            <div>totalLikeValue</div>
                         </section>
                     </div>
                 </div>
