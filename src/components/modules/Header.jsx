@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navigation from './shared/Navigation.jsx';
+import Navigation from '../shared/Navigation.jsx';
 
 export default class Header extends Component {
 
