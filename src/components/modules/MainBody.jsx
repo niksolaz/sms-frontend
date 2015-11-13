@@ -8,11 +8,20 @@ export default class MainBody extends Component {
   render() {
     return (
       <div>
-        <HomePage />
+       {/* <HomePage />
         <FacebookPage />
-        <TwitterPage />
+        <TwitterPage /> */}
         <LoginPage />
       </div>
     );
   }
 }
+
+{/*
+ COMMENT:
+ 
+ I tried to work only with longin page for now.
+ 
+ So i can blind other page
+
+*/}
