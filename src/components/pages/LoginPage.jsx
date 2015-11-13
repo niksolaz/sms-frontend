@@ -12,7 +12,8 @@ export default class LoginPage extends Component {
                             <input type="text" name="email"></input>
                             <br/>
                             Password:<br/>
-                            <input type="password" name="psw"></input><br/>
+                            <input type="password" name="psw"></input>
+                            Confirm Your Login:<br/>
                             <input>GO!</input>
                         </fieldset>
                     </form>
