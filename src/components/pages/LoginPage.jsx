@@ -13,6 +13,7 @@ export default class LoginPage extends Component {
                             <br/>
                             Password:<br/>
                             <input type="password" name="psw"></input>
+                            <br/>
                             Confirm Your Login:<br/>
                             <input>GO!</input>
                         </fieldset>
