@@ -8,9 +8,9 @@ export default class MainBody extends Component {
   render() {
     return (
       <div>
-        {/*<HomePage />*/}
-        <FacebookPage />
-        {/*<TwitterPage />
+        <HomePage />
+        {/*<FacebookPage />
+        <TwitterPage />
         <LoginPage />*/}
       </div>
     );
@@ -20,7 +20,7 @@ export default class MainBody extends Component {
 {/*
  COMMENT:
  
- I tried to work only with facebook page for now.
+ I tried to work only with Home page for now.
  
  So i can blind other page
 
