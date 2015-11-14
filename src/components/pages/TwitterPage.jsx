@@ -5,21 +5,24 @@ export default class TwitterPage extends Component {
         return(
             <div>
                 <div className='TwitterContainer'>
-                    Twitter
+                    <h2>Twitter</h2><br/>
                     <textarea></textarea>
+                    <br/>
                     <div className='TwitterSignUpContainer'>
                         <table>
                             <tr>
-                                <th>singleSignUp</th>
-                                <th>likeValue</th>
+                                <th> singleSignUp </th>
+                                <th> likeValue </th>
                             </tr>
                         </table>
                         <div><navbar></navbar></div>
                     </div>
                     <div className='TwitterTotalContainer'>
                         <table>
-                            <th>totalSignUp</th>
-                            <th>totalLikeValue</th>
+                            <tr>
+                                <th> totalSignUp </th>
+                                <th> totalLikeValue </th>
+                            </tr>
                         </table>
                     </div>
                 </div>
