@@ -5,7 +5,7 @@ export default class FacebookPage extends Component {
         return(
             <div>
                 <div className='FacebookContainer'>
-                    <h2>Facebook<h2><br/>
+                    <h2>Facebook</h2><br/>
                     <textarea></textarea>
                     <br/>
                     <div className='FacebookSignUpContainer'>
