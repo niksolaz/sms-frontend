@@ -9,9 +9,9 @@ export default class MainBody extends Component {
     return (
       <div>
         <HomePage />
-        {/*<FacebookPage />
+        <FacebookPage />
         <TwitterPage />
-        <LoginPage />*/}
+        <LoginPage />
       </div>
     );
   }
@@ -20,8 +20,6 @@ export default class MainBody extends Component {
 {/*
  COMMENT:
  
- I tried to work only with Home page for now.
- 
- So i can blind other page
+ Now i try to put all together.
 
 */}
