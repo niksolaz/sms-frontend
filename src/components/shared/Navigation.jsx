@@ -25,8 +25,9 @@ let App = React.createClass({
 
 let routes = (  
   <Route name="app" path="/" handler={App}>
-    <Route name="fb" path="/Facebook" handler={LoginPage}/>
-    <Route name="tweet" path="/Twitter" handler={LoginPage}/>
+    <Route name="home" path="/Home" handler={HomePage}/>
+    <Route name="fb" path="/Facebook" handler={FacebookPage}/>
+    <Route name="tweet" path="/Twitter" handler={TwitterPage}/>
     <Route name="login" path="/login" handler={LoginPage}/>
   </Route>
 );
