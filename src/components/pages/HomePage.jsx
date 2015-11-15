@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class HomePage extends Component {
+let HomePage = React.createClass({
     render (){
         return(
             <div>
@@ -13,4 +13,6 @@ export default class HomePage extends Component {
             </div>
         );
     }
-}
+});
+
+export default HomePage;
