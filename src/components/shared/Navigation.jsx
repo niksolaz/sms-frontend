@@ -1,23 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';  
+import Router from 'react-router';  
+import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
 
+import HomePage from './components/pages/HomePage.js';
+import FacebookPage from './components/pages/FacebookPage.js';
+import TwitterPage from './components/pages/TwitterPage.js';
+import LoginPage from './components/pages/LoginPage.js';
 
-export default class Navigation extends Component {
+let App = React.createClass({  
   render() {
     return (
-      <div>
-        <div className='NavigationContainer'>
-          <a href="./HomePage.jsx">Home</a>
-          <a href="./FacebookPage.jsx">Facebook</a>
-          <a href="./TwitterPage.jsx">Twitter</a>
-          <form>
-            Search:
-            <input type="search" name="search"></input>
-          </form>
-          <a href="./LoginPage.jsx">Login</a>
-          <div><img /></div>
-          <a href="./LoginPage.jsx">Sign Up</a>
-        </div>
+      <div className="nav">
+        <Link to="app">Home</Link>
+        <Link to="fb">Facebook</Link>
+        <Link to="tweet">Twitter</Link>
+        <Link to="login">Login</Link>
+
+        {/* this is the importTant part */}
+        <RouteHandler/>
       </div>
     );
   }
-}
+});
+
+let routes = (  
+  <Route name="app" path="/" handler={App}>
+    <Route name="fb" path="/Facebook" handler={LoginPage}/>
+    <Route name="tweet" path="/Twitter" handler={LoginPage}/>
+    <Route name="login" path="/login" handler={LoginPage}/>
+  </Route>
+);
+
+Router.run(routes, function (Handler) {  
+  React.render(<Handler/>, document.body);
+});
