@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class FacebookPage extends Component {
+let FacebookPage =React.createClass ({
     render (){
         return(
             <div>
@@ -29,4 +29,6 @@ export default class FacebookPage extends Component {
             </div>
         );
     }
-}
+});
+
+export default FacebookPage;

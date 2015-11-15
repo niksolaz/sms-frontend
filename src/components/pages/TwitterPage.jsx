@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class TwitterPage extends Component {
+let TwitterPage =React.createClass ({
     render (){
         return(
             <div>
@@ -29,4 +29,6 @@ export default class TwitterPage extends Component {
             </div>
         );
     }
-}
+});
+
+export default TwitterPage;

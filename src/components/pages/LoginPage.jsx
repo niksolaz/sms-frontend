@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class LoginPage extends Component {
+let LoginPage =React.createClass ({
     render (){
         return(
             <div>
@@ -22,4 +22,6 @@ export default class LoginPage extends Component {
             </div>
         );
     }
-}
+});
+
+export default LoginPage;
