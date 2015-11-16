@@ -11,8 +11,8 @@ let App = React.createClass({
   render() {
     return (
       <div className="nav">
-       {/*<Link to="app">Home</Link>
-        <Link to="fb">Facebook</Link>
+        <Link to="app">Home</Link>
+        {/*<Link to="fb">Facebook</Link>
         <Link to="tweet">Twitter</Link>*/}
         <Link to="login">Login</Link>
 
