@@ -7,7 +7,7 @@ import FacebookPage from '../components/pages/FacebookPage.js';
 import TwitterPage from '../components/pages/TwitterPage.js';*/
 import LoginPage from '../pages/LoginPage.js';
 
-let App = React.createClass({  
+let Navigation = React.createClass({  
   render() {
     return (
       <div className="nav">
@@ -24,7 +24,7 @@ let App = React.createClass({
 });
 
 let routes = (  
-  <Route name="app" path="/" handler={App}>
+  <Route name="app" path="/" handler={Navigation}>
     {/*<Route name="home" path="/Home" handler={HomePage}/>
     <Route name="fb" path="/Facebook" handler={FacebookPage}/>
     <Route name="tweet" path="/Twitter" handler={TwitterPage}/>*/}
