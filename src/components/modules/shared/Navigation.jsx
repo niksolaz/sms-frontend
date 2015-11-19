@@ -2,10 +2,10 @@ import React from 'react';
 import Router from 'react-router';  
 import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
 
-{/*import HomePage from '../components/pages/HomePage.js';
-import FacebookPage from '../components/pages/FacebookPage.js';
-import TwitterPage from '../components/pages/TwitterPage.js';*/
-import LoginPage from '../pages/LoginPage.js';
+{/*import HomePage from '../components/pages/HomePage.jsx';
+import FacebookPage from '../components/pages/FacebookPage.jsx';
+import TwitterPage from '../components/pages/TwitterPage.jsx';*/
+import LoginPage from '../pages/LoginPage.jsx';
 
 let App = React.createClass({  
   render() {
