@@ -5,7 +5,7 @@ import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
 {/*import HomePage from '../components/pages/HomePage.js';
 import FacebookPage from '../components/pages/FacebookPage.js';
 import TwitterPage from '../components/pages/TwitterPage.js';*/
-import LoginPage from '../pages/LoginPage.js';
+import LoginPage from '../shared/LoginPage.js';
 
 let App = React.createClass({  
   render() {
