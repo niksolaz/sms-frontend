@@ -11,10 +11,7 @@ let Navigation = React.createClass({
   render() {
     return (
       <div className="nav">
-        <Link to="app">Nav</Link>
-        <Link to="home">Home</Link>
-        <Link to="fb">Facebook</Link>
-        <Link to="tweet">Twitter</Link>
+        <Link to="app">SmsL</Link>
         <Link to="login">Login</Link>
 
         <RouteHandler/>
@@ -25,9 +22,6 @@ let Navigation = React.createClass({
 
 let routes = (  
   <Route name="app" path="/" handler={Navigation}>
-    <Route name="home" path="/HomePage" handler={HomePage}/>
-    <Route name="fb" path="/FacebookPage" handler={FacebookPage}/>
-    <Route name="tweet" path="/TwitterPage" handler={TwitterPage}/>
     <Route name="login" path="/LoginPage" handler={LoginPage}/>
   </Route>
 );
