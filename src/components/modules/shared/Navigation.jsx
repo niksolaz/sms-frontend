@@ -25,10 +25,10 @@ let Navigation = React.createClass({
 
 let routes = (  
   <Route name="app" path="/" handler={Navigation}>
-    <Route name="home" path="/Home" handler={HomePage}/>
-    <Route name="fb" path="/Facebook" handler={FacebookPage}/>
-    <Route name="tweet" path="/Twitter" handler={TwitterPage}/>
-    <Route name="login" path="/login" handler={LoginPage}/>
+    <Route name="home" path="/HomePage" handler={HomePage}/>
+    <Route name="fb" path="/FacebookPage" handler={FacebookPage}/>
+    <Route name="tweet" path="/TwitterPage" handler={TwitterPage}/>
+    <Route name="login" path="/LoginPage" handler={LoginPage}/>
   </Route>
 );
 
