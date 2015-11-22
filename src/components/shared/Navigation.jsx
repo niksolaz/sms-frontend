@@ -2,7 +2,7 @@ import React from 'react';
 import Router from 'react-router';  
 import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
 
-import LoginPage from './pages/LoginPage.jsx';
+import LoginPage from '../pages/LoginPage.jsx';
 
 let Navigation = React.createClass({  
   render() {
