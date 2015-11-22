@@ -1,23 +1,10 @@
 import React, { Component } from 'react';
-import Router from 'react-router'; 
-import Header from './components/modules/Header.jsx';
-{/*
-import Footer from './components/modules/Footer.jsx';
-import MainBody from './components/modules/MainBody.jsx';
-*/}
-
-let App = React.craeteClass ({
+export default class App extends Component {
   render() {
     return (
       <div>
-          <Header />
-        {/* 
-          <MainBody />
-          <Footer />
-        */}
+          This is your app!
       </div>
     );
   }
-});
-
-export default App;
+}

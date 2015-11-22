@@ -1,29 +1,13 @@
-import React from 'react';  
-import Router from 'react-router';  
-import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
+import React, { Component } from 'react';  
 
-import LoginPage from '../pages/LoginPage.jsx';
-
-let Navigation = React.createClass({  
+export default class Navigation extends Component {
   render() {
     return (
-      <div className="nav">
-        <Link to="app">SmsL</Link>
-        <Link to="login">Login</Link>
-
-        <RouteHandler/>
+      <div>
+          Navigation bar
       </div>
     );
   }
-});
+}
 
-let routes = (  
-  <Route name="app" path="/" handler={Navigation}>
-    <Route name="login" path="/LoginPage" handler={LoginPage}/>
-  </Route>
-);
-
-Router.run(routes, function (Handler) {  
-  React.render(<Handler/>, document.body);
-});
 
