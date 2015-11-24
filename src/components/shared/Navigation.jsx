@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import LoginPage, { Component } from '../pages/LoginPage.jsx'
+import LoginPage from '../pages/LoginPage.jsx'
 
 export default class Navigation extends Component {
   render() {
