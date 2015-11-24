@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-let LoginPage =React.createClass ({
-    render (){
-        return(
+export default class LoginPage extends Component {
+  render() {
+    return (
             <div>
                 <div className='LoginContainer'>
                     <form>
@@ -20,8 +20,6 @@ let LoginPage =React.createClass ({
                     </form>
                 </div>
             </div>
-        );
-    }
-});
-
-export default  LoginPage;
+    );
+  }
+}
