@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Header from './modules/Header.jsx';
+import Header from './components/modules/Header.jsx';
 
 export default class App extends Component {
   render() {
