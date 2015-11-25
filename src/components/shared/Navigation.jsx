@@ -1,4 +1,5 @@
 import React, { Component } from 'react'; 
+
 import LoginPage from '../pages/LoginPage.jsx'
 
 export default class Navigation extends Component {
@@ -6,10 +7,11 @@ export default class Navigation extends Component {
     return (
       <div>
           Navigation bar
-          <Link to="login">Login</Link>
+          <LoginPage />
       </div>
     );
   }
+  
 }
 
 
