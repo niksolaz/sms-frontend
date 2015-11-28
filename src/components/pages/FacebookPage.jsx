@@ -28,6 +28,6 @@ export default class FacebookPage extends Component {
             </div>
         </div>
         );
-    );
+
   }
 }
