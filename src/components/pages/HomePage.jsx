@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 
-let HomePage = React.createClass({
-    render (){
-        return(
+export default class HomePage extends Component {
+  render() {
+    return (
             <div>
-                <div className='HomeContainer'>
-                    <h3>Write your message and send it to Facebook and Twitter</h3>
-                    <textarea></textarea>
-                    <br/>
-                    <button>Send</button>
-                </div>
+                <h2> Welcome on Home Page </h2>
             </div>
-        );
-    }
-});
-
-export default HomePage;
+    );
+  }
+}
