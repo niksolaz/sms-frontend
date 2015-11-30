@@ -52,9 +52,15 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "body-parser": "^1.14.1",
     "compression": "^1.6.0",
+    "path": "^0.12.7",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0",
+    "redux": "^3.0.4",
+    "redux-thunk": "^1.0.0"
   },
   "babel": {
     "presets": [
