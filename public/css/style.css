@@ -1,0 +1,18 @@
+body
+{
+    background-color: silver;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.jumbotron
+{
+   text-align: center; 
+}
+
+table, th, td {
+    border: 1px solid black;
+}

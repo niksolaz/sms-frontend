@@ -27,4 +27,5 @@ build/Release
 node_modules
 
 # Public files
-public/*.js
+public/app.js
+public/common.js
