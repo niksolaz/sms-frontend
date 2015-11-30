@@ -1,7 +1,7 @@
 {
-  "name": "react-hot-boilerplate",
+  "name": "sms-frontend",
   "version": "1.0.0",
-  "description": "Boilerplate for ReactJS project with hot code reloading",
+  "description": "SMS Frontend",
   "scripts": {
     "build": "webpack",
     "postinstall": "npm run build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaearon/react-hot-boilerplate.git"
+    "url": "https://github.com/niksolaz/sms-frontend.git"
   },
   "keywords": [
     "react",
@@ -24,12 +24,12 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Nicola Solazzo (http://github.com/niksolaz)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
+    "url": "https://github.com/niksolaz/sms-frontend/issues"
   },
-  "homepage": "https://github.com/gaearon/react-hot-boilerplate",
+  "homepage": "https://github.com/niksolaz/sms-frontend",
   "devDependencies": {
     "autoprefixer": "^6.1.1",
     "autoprefixer-loader": "^3.1.0",
@@ -54,7 +54,8 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "compression": "^1.6.0",
-    "path": "^0.12.7",
+    "express": "^4.13.3",
+    "history": "^1.13.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
