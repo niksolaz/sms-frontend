@@ -1,31 +1,73 @@
-var path = require('path');
+/**
+* Dependencies
+*/
 var webpack = require('webpack');
+var path = require('path');
 
+/**
+* Environment
+*/
+var isProduction = process.env.NODE_ENV === 'production';
+var port = process.env.PORT || 3000;
+
+/**
+* Plugins
+*/
+var plugins = [
+  new webpack.optimize.CommonsChunkPlugin('common.js'),
+  new webpack.DefinePlugin({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.WEBSOCKET_API_URL': JSON.stringify(process.env.WEBSOCKET_API_URL),
+    'process.env.API_URL': JSON.stringify(process.env.API_URL)
+  })
+];
+
+if (!isProduction) {
+  plugins.push(new webpack.HotModuleReplacementPlugin()),
+  plugins.push(new webpack.NoErrorsPlugin())
+}
+
+if (isProduction) {
+  plugins.push(new webpack.optimize.DedupePlugin());
+  plugins.push(new webpack.optimize.UglifyJsPlugin());
+}
+
+/**
+* Entry points
+*/
+var entry = [
+  './src/index.jsx'
+];
+
+if (!isProduction) {
+  entry.unshift('webpack/hot/only-dev-server');
+  entry.unshift('webpack-dev-server/client?http://localhost:' + port);
+}
+
+/**
+* Config
+*/
 module.exports = {
-  devtool: 'eval',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './src/index.jsx'
-  ],
+  devtool: !isProduction ? 'inline-source-map' : null,
+
+  entry: entry,
+
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    path: path.join(__dirname, '/public/'),
+    publicPath: '/',
+    filename: 'app.js'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+
+  plugins: plugins,
+
   module: {
     loaders: [{
-      test: /\.jsx$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src'),
-      exclude: path.join(__dirname, 'node_modules'),
-    },
-      { test: /\.css$/, loader: "style!css" }]
-  },
-  plugins: [
-      new webpack.NoErrorsPlugin()
-    ]
+      test: /\.jsx?$/,
+      loaders: !isProduction ? ['react-hot', 'babel'] : ['babel'],
+      exclude: /node_modules/
+    }, {
+      test: /\.scss$/,
+      loader: 'style!css!autoprefixer!sass'
+    }]
+  }
 };
