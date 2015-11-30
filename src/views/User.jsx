@@ -13,7 +13,7 @@ export default class User extends React.Component {
         return (
             <div className="container">
                 <Header  />
-                <h3>User</h3>
+                <h3>User {this.props.params.username}</h3>
             </div>
         );
     }
