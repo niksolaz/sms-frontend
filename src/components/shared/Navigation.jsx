@@ -1,4 +1,4 @@
-import React, { Component } from 'react'; 
+import React, { Component } from 'react';
 
 import {Link} from 'react-router';
 
@@ -11,13 +11,11 @@ export default class Navigation extends Component {
               <ul className="nav navbar-nav">
                   <li className="navbar-link"><Link to={'/'}>Home</Link></li>
                   <li className="navbar-link"><Link to={'/login'}>Login</Link></li>
-                  <li className="navbar-link"><Link to={'/user'}>User</Link></li>
+                  <li className="navbar-link"><Link to={'/users'}>User</Link></li>
               </ul>
           </div>
       </nav>
     );
   }
-  
+
 }
-
-

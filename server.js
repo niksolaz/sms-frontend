@@ -5,7 +5,6 @@ var port = process.env.PORT || 3000;
 var host = process.env.HOST || "localhost";
 
 new WebpackDevServer(webpack(config), {
-  contentBase:config.output.path,
   publicPath: config.output.publicPath,
   hot: true,
   historyApiFallback: true

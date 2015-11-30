@@ -8,12 +8,13 @@ export default class Home extends React.Component {
         super(props);
     }
 
-    
+
     render() {
         return (
             <div className="container">
                 <Header  />
                 <h3>Home</h3>
+                <Link to={'/users'}>User</Link>
             </div>
         );
     }
