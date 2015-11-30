@@ -10,10 +10,15 @@ export default class User extends React.Component {
 
     
     render() {
+        let username = this.props.params.username;
+        let message = username ? "I am " + username : "This is the user list";
         return (
             <div className="container">
                 <Header  />
-                <h3>User {this.props.params.username}</h3>
+                <h3>Users</h3>
+                <div>
+                    {message}
+                </div>
             </div>
         );
     }
