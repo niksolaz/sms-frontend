@@ -20,6 +20,9 @@ export default class Login extends React.Component {
                 <br/>
                 password:<br/>
                 <input type="text" name="password"/>
+                <br/>
+                send login:<br/>
+                <input type="submit" value="Submit"/>
                 </form>
             </div>
         );
