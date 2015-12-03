@@ -14,6 +14,30 @@ export default class Facebook extends React.Component {
             <div className="container">
                 <Header  />
                 <h3>Facebook</h3>
+                <br/>
+                <Link to={'/users'}>User</Link>
+                <div>
+                  <ul>
+                    <li>
+                    Message user Facebook: <br/>
+                      <textarea row='100' col='100'>
+                        <p>Message</p>
+                      </textarea>
+                    </li>
+                    <li>
+                    Message user Facebook: <br/>
+                      <textarea row='100' col='100'>
+                        <p>Message</p>
+                      </textarea>
+                    </li>
+                    <li>
+                    Message user Facebook: <br/>
+                      <textarea row='100' col='100'>
+                        <p>Message</p>
+                      </textarea>
+                    </li>
+                  </ul>
+                </div>
             </div>
         );
     }

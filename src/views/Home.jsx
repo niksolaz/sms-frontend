@@ -14,7 +14,9 @@ export default class Home extends React.Component {
             <div className="container">
                 <Header  />
                 <h3>Home</h3>
+                <br/>
                 <Link to={'/login'}>Login</Link>
+                <br/>
                 <Link to={'/users'}>User</Link>
             </div>
         );

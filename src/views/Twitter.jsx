@@ -14,6 +14,30 @@ export default class Twitter extends React.Component {
             <div className="container">
                 <Header  />
                 <h3>Twitter</h3>
+                <br/>
+                <Link to={'/users'}>User</Link>
+                <div>
+                  <ul>
+                    <li>
+                    Message user Twitter: <br/>
+                      <textarea row='100' col='100'>
+                        <p>Message</p>
+                      </textarea>
+                    </li>
+                    <li>
+                    Message user Twitter: <br/>
+                      <textarea row='100' col='100'>
+                        <p>Message</p>
+                      </textarea>
+                    </li>
+                    <li>
+                    Message user Twitter: <br/>
+                      <textarea row='100' col='100'>
+                        <p>Message</p>
+                      </textarea>
+                    </li>
+                  </ul>
+                </div>
             </div>
         );
     }
