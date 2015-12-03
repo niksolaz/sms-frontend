@@ -47,7 +47,7 @@ if (!isProduction) {
 * Config
 */
 module.exports = {
-  devtool: !isProduction ? 'inline-source-map' : null,
+  devtool: !isProduction ? 'source-map' : null,
 
   entry: entry,
 
