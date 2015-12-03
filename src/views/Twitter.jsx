@@ -19,4 +19,4 @@ export default class Twitter extends React.Component {
     }
 }
 
-Home.contextTypes = { history: PropTypes.history };
+Twitter.contextTypes = { history: PropTypes.history };

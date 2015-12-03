@@ -19,4 +19,4 @@ export default class Facebook extends React.Component {
     }
 }
 
-Home.contextTypes = { history: PropTypes.history };
+Facebook.contextTypes = { history: PropTypes.history };
