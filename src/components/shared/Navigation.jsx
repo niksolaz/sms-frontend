@@ -12,6 +12,8 @@ export default class Navigation extends Component {
                   <li className="navbar-link"><Link to={'/'}>Home</Link></li>
                   <li className="navbar-link"><Link to={'/login'}>Login</Link></li>
                   <li className="navbar-link"><Link to={'/users'}>User</Link></li>
+                  <li className="navbar-link"><Link to={'/Facebook'}>Facebook</Link></li>
+                  <li className="navbar-link"><Link to={'/Twitter'}>Twitter</Link></li>
               </ul>
           </div>
       </nav>

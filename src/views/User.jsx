@@ -8,7 +8,7 @@ export default class User extends React.Component {
         super(props);
     }
 
-    
+
     render() {
         let username = this.props.params.username;
         let message = username ? "I am " + username : "This is the user list";
@@ -17,7 +17,15 @@ export default class User extends React.Component {
                 <Header  />
                 <h3>Users</h3>
                 <div>
-                    {message}
+                    <textarea row='100' col='100'></textarea>
+                    <br/>
+                    <input type='submit' value='send sms'/> only to Facebook
+                    <br/>
+                    <br/>
+                    <input type='submit' value='send sms'/> only to Twitter
+                    <br/>
+                    <br/>
+                    <input type='submit' value='send sms'/> to Both
                 </div>
             </div>
         );
