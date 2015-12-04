@@ -11,7 +11,7 @@ export default class Facebook extends React.Component {
     {/*
     if user is logged in ->DO THIS: user see you message
     
-    if user is logged out ->DO THIS: user must be logged in 
+    if user is logged out ->DO THIS: user go to login page 
     */}
 
     render() {
