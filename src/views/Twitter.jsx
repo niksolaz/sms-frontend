@@ -7,8 +7,11 @@ export default class Twitter extends React.Component {
     constructor(props){
         super(props);
     }
-
-
+    {/*
+    if user is logged in ->DO THIS: user see you message
+    
+    if user is logged out ->DO THIS: user must be logged in 
+    */}
     render() {
         return (
             <div className="container">
@@ -18,18 +21,6 @@ export default class Twitter extends React.Component {
                 <Link to={'/users'}>User</Link>
                 <div>
                   <ul>
-                    <li>
-                    Message user Twitter: <br/>
-                      <textarea row='100' col='100'>
-                        <p>Message</p>
-                      </textarea>
-                    </li>
-                    <li>
-                    Message user Twitter: <br/>
-                      <textarea row='100' col='100'>
-                        <p>Message</p>
-                      </textarea>
-                    </li>
                     <li>
                     Message user Twitter: <br/>
                       <textarea row='100' col='100'>

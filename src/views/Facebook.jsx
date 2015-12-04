@@ -8,6 +8,11 @@ export default class Facebook extends React.Component {
         super(props);
     }
 
+    {/*
+    if user is logged in ->DO THIS: user see you message
+    
+    if user is logged out ->DO THIS: user must be logged in 
+    */}
 
     render() {
         return (
@@ -18,18 +23,6 @@ export default class Facebook extends React.Component {
                 <Link to={'/users'}>User</Link>
                 <div>
                   <ul>
-                    <li>
-                    Message user Facebook: <br/>
-                      <textarea row='100' col='100'>
-                        <p>Message</p>
-                      </textarea>
-                    </li>
-                    <li>
-                    Message user Facebook: <br/>
-                      <textarea row='100' col='100'>
-                        <p>Message</p>
-                      </textarea>
-                    </li>
                     <li>
                     Message user Facebook: <br/>
                       <textarea row='100' col='100'>
