@@ -1,4 +1,5 @@
 import React from 'react';
+import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
 import {Link, PropTypes} from 'react-router';
@@ -8,14 +9,21 @@ export default class Facebook extends React.Component {
         super(props);
     }
 
-    {/*
-    if user is logged in ->DO THIS: user see you message
-    
-    if user is logged out ->DO THIS: user go to login page 
-    */}
+    isLogged(){
+      /**
+       * It checks if the cookie of authentication is present
+       */
+      const cookieAuthentication = 'cookieMonster';
+      // If the cookie is present, return true otherwise false
+      return cookie.load(cookieAuthentication) !== null ? true: false;
+    }
 
     render() {
-        return (
+         /* Using the ternary operator <clause> ? <statement if clause is true> : <statement if the clause is false>*/
+        return !this.isLogged() ? 
+            // If it is not logged
+            <div className="container">Not logged</div> :
+            // If it is logged
             <div className="container">
                 <Header  />
                 <h3>Facebook</h3>

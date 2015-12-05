@@ -8,7 +8,12 @@ export default class User extends React.Component {
         super(props);
     }
 
-
+    /*
+    
+    fake username 
+    
+    create fake message to send at Facebook and Twitter
+    */
     render() {
         let username = this.props.params.username;
         let message = username ? "I am " + username : "This is the user list";

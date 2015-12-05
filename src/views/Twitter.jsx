@@ -7,11 +7,11 @@ export default class Twitter extends React.Component {
     constructor(props){
         super(props);
     }
-    {/*
+    /*
     if user is logged in ->DO THIS: user see you message 
     
     if user is logged out ->DO THIS: user go to login page 
-    */}
+    */
     render() {
         return (
             <div className="container">
