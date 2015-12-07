@@ -18,6 +18,10 @@ export default class Home extends React.Component {
                 <Link to={'/login'}>Login</Link>
                 <br/>
                 <Link to={'/users'}>User</Link>
+                <br/>
+                <Link to={'/facebook'}>Facebook</Link>
+                <br/>
+                <Link to={'/twitter'}>Twitter</Link>
             </div>
         );
     }
