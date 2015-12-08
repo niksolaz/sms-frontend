@@ -32,7 +32,11 @@ class LoginPanel extends Component{
         this.setState({'password': event.target.value});
     }
 
-    onLogin(){
+    onLogin(event){
+        // PreventDefault: it stop bubbling the event.
+        event.preventDefault();
+        
+        // Now, it will run our code.
         // Take the email and password from the state in the React component
         const email = this.state.email;
         const password = this.state.password;
