@@ -11,21 +11,22 @@ class LoginPanel extends Component{
         super(props);
         
         this.state = {
-            email: "",
+            email: "";
             password: ""
         };
     }
     onChangeEmail(event){
-        // Set the email state
+        // Set the email state. It change everytime the onChange method fires in the input
         this.setState({'email': event.target.value});
     }
     
     onChangePassword(event){
-        // Set the password state
+        // Set the password state. It change everytime the onChange method fires in the input
         this.setState({'password': event.target.value});
     }
     
     onLogin(){
+        // Take the email and password from the state in the React component
         const email = this.state.email;
         const password = this.state.password;
         // Stupid test

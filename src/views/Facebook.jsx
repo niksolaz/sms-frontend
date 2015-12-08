@@ -39,8 +39,7 @@ export default class Facebook extends React.Component {
                     </li>
                   </ul>
                 </div>
-            </div>
-        );
+            </div>;
     }
 }
 

@@ -37,7 +37,7 @@ export default class Twitter extends React.Component {
                     </li>
                   </ul>
                 </div>
-            </div>
+            </div>;
     }
 }
 
