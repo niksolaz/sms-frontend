@@ -7,6 +7,8 @@ import {Link, PropTypes} from 'react-router';
 export default class Twitter extends React.Component {
     constructor(props){
         super(props);
+        
+        this.isLogged = this.isLogged.bind(this);
     }
     isLogged(){
       /**

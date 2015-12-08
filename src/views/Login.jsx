@@ -42,6 +42,10 @@ class LoginPanel extends Component{
         }
     }
 
+    offLogin(){
+        cookie.remove(cookieAuthentication, 'thisisasecret');
+    }
+
     render(){
         return(
             <div className="container">
