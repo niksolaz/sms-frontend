@@ -35,6 +35,10 @@ class LoginPanel extends Component{
         }
     }
 
+    offLogin(){
+        cookie.remove(cookieAuthentication, 'thisisasecret');
+    }
+
     render(){
         return(
             <div className="container">
@@ -47,8 +51,11 @@ class LoginPanel extends Component{
                 password:<br/>
                 <input type="text" name="password" onChange={this.onChangePassword} />
                 <br/>
-                send login:<br/>
-                <input type="submit" value="Submit" onClick={this.props.onLogin}/>
+                Sign In:<br/>
+                <input type="submit" value="Login" onClick={this.props.onLogin}/>
+                <br/>
+                Sign Out:<br/>
+                <input type="submit" value="Logout" onClick={this.props.offLogin}/>
                 </form>
             </div>
         );
