@@ -10,11 +10,18 @@ class LoginPanel extends Component{
     constructor(props){
         super(props);
 
+        // Setting a default state
         this.state = {
             email: "",
             password: ""
         };
+        
+        // We need to bind the methods to the object. Requirement from ES6 classes.
+        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangePassword = this.onChangePassword.bind(this);
+        this.onLogin = this.onLogin.bind(this);
     }
+    
     onChangeEmail(event){
         // Set the email state. It change everytime the onChange method fires in the input
         this.setState({'email': event.target.value});
@@ -48,7 +55,7 @@ class LoginPanel extends Component{
                 <input type="text" name="password" onChange={this.onChangePassword} />
                 <br/>
                 send login:<br/>
-                <input type="submit" value="Submit" onClick={this.props.onLogin}/>
+                <input type="submit" value="Submit" onClick={this.onLogin}/>
                 </form>
             </div>
         );
@@ -56,7 +63,12 @@ class LoginPanel extends Component{
 }
 
 class LogoutPanel  extends Component{
-
+    constructor(props){
+        super(props);
+        
+        this.onLogout = this.onLogout.bind(this);
+    }
+    
     onLogout(event){
         // Remove the cookie when clicking the button
         cookie.remove(cookieAuthentication);
@@ -75,6 +87,8 @@ class LogoutPanel  extends Component{
 export default class Login extends Component {
     constructor(props){
         super(props);
+        
+        this.isLogged = this.isLogged.bind(this);
     }
 
     isLogged(){
