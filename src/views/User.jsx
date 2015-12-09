@@ -1,19 +1,30 @@
-import React from 'react';
+import React,{Component} from 'react';
+import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
 import {Link, PropTypes} from 'react-router';
+
+const cookieAuthentication = 'cookieMonster';
+
+class UserLoggedIn extends Component{
+    constructor(props){
+        super(props);
+        
+        this.isLogged = this.isLogged.bind(this);
+    }
+    
+    render(){
+        return
+    }
+}
+
+class UserLoggedOut extends Component{}
 
 export default class User extends React.Component {
     constructor(props){
         super(props);
     }
-
-    /*
     
-    fake username 
-    
-    create fake message to send at Facebook and Twitter
-    */
     render() {
         let username = this.props.params.username;
         let message = username ? "I am " + username : "This is the user list";
@@ -24,13 +35,7 @@ export default class User extends React.Component {
                 <div>
                     <textarea row='100' col='100'></textarea>
                     <br/>
-                    <input type='submit' value='send sms'/> only to Facebook
-                    <br/>
-                    <br/>
-                    <input type='submit' value='send sms'/> only to Twitter
-                    <br/>
-                    <br/>
-                    <input type='submit' value='send sms'/> to Both
+                    <input type='submit' value='send sms'/> 
                 </div>
             </div>
         );
