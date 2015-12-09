@@ -43,6 +43,9 @@ class LoginPanel extends Component{
         // Stupid test
         if (email === "nicola" && password === "password"){
             cookie.save(cookieAuthentication, 'thisisasecret');
+            // Call the function login in the props
+            // sent from the Login component
+            this.props.login();
         }
     }
 
@@ -80,6 +83,8 @@ class LogoutPanel  extends Component{
     onLogout(event){
         // Remove the cookie when clicking the button
         cookie.remove(cookieAuthentication);
+        // Call the logout function sent in the props from the Login component
+        this.props.logout();
     }
 
     render(){
@@ -97,17 +102,34 @@ export default class Login extends Component {
         super(props);
         
         this.isLogged = this.isLogged.bind(this);
+        this.onSuccessLogin = this.onSuccessLogin.bind(this);
+        this.onSuccessLogout = this.onSuccessLogout.bind(this);
     }
 
     isLogged(){
       // If the cookie is present, return true otherwise false
-      return cookie.load(cookieAuthentication) !== null ? true: false;
+      // If the user is log in, cookie.load(cookieAuthentication) will return the cookie string, 
+      // otherwise it will return undefined. 
+      const cookieValue = cookie.load(cookieAuthentication);
+     
+      const isUserLogged =  typeof( cookieValue ) !== 'undefined';
+      return isUserLogged;
+    }
+    
+    // When we login successfully from the system
+    onSuccessLogin(){
+        this.setState({logged: true});
+    }
+    
+    // When we logout successfully from the system
+    onSuccessLogout(){
+        this.setState({logged: false});
     }
 
     render() {
         return this.isLogged() ?
-            <LoginPanel  /> :
-            <LogoutPanel />;
+            <LogoutPanel  logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
+            <LoginPanel login={onSuccessLogin} />; // User is not logged in. Let him log in
     }
 }
 
