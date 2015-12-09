@@ -49,9 +49,6 @@ class LoginPanel extends Component{
         }
     }
 
-    offLogin(){
-        cookie.remove(cookieAuthentication, 'thisisasecret');
-    }
 
     render(){
         return(
@@ -129,7 +126,7 @@ export default class Login extends Component {
     render() {
         return this.isLogged() ?
             <LogoutPanel  logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
-            <LoginPanel login={onSuccessLogin} />; // User is not logged in. Let him log in
+            <LoginPanel login={this.onSuccessLogin} />; // User is not logged in. Let him log in
     }
 }
 
