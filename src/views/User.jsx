@@ -15,9 +15,9 @@ class UserLoggedIn extends Component{
         let username = this.props.params.username;
         let message = username ? "I am " + username : "This is the user list";
         return (
-            <div className="container">
+            <div className="container"> 
                 <Header  />
-                <h3>Users</h3>
+                <h3>this is the User {username}</h3>
                 <div>
                     <textarea row='100' col='100'></textarea>
                     <br/>
