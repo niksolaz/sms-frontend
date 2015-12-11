@@ -9,22 +9,15 @@ const cookieAuthentication = 'cookieMonster';
 class UserLoggedIn extends Component{
     constructor(props){
         super(props);
-
-        this.props.params.username = this.props.params.username.bind(this);
-    }
-
-    onChangeUsername(){
-      let username = this.props.params.username;
-      let message = username ? "I am " + username : "This is the user list";
     }
 
     render(){
         return (
-            <div className="container"> 
+            <div className="container">
                 <Header  />
-                <h3 onChange={this.onChangeUsername}></h3>
+                <h3>Users</h3>
                 <div>
-                    <textarea row='100' col='100' onChange={this.message}></textarea>
+                    <textarea row='100' col='100'></textarea>
                     <br/>
                     <input type='submit' value='send sms'/>
                 </div>
@@ -36,12 +29,24 @@ class UserLoggedIn extends Component{
 class UserLoggedOut extends Component{
     constructor(props){
         super(props);
+
+        this.onChangeUsernameLogOut = this.onChangeUsernameLogOut.bind(this);
+    }
+
+    onChangeUsernameLogOut(){
+      let username = this.props.params.username;
     }
 
     render(){
         return (
             <div className="container">
-                <Link to={'/login'}>Login</Link>
+                <Header  />
+                <h3>{this.onChangeUsernameLogOut}</h3>
+                <div>
+                    <textarea row='100' col='100'></textarea>
+                    <br/>
+                    <input type='submit' value='send sms'/>
+                </div>
             </div>
         );
     }
