@@ -12,8 +12,8 @@ class UserLoggedIn extends Component{
     }
 
     render(){
-        // Check if this.props.params is available, otherwise write "Unknown user"
-        const username = this.props.params ? this.props.params.username : "Unknown user";
+
+        const username = this.props.user;
         return (
             <div className="container">
                 <Header  />
@@ -61,8 +61,9 @@ export default class User extends React.Component {
     }
 
     render() {
+        const username = this.props.params ? this.props.params.username : "unknown";
         return this.isLogged() ?
-            <UserLoggedIn /> :
+            <UserLoggedIn user={username} /> :
             <UserLoggedOut />;
     }
 }
