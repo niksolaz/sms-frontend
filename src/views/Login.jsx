@@ -15,13 +15,13 @@ class LoginPanel extends Component{
             email: "",
             password: ""
         };
-        
+
         // We need to bind the methods to the object. Requirement from ES6 classes.
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangePassword = this.onChangePassword.bind(this);
         this.onLogin = this.onLogin.bind(this);
     }
-    
+
     onChangeEmail(event){
         // Set the email state. It change everytime the onChange method fires in the input
         this.setState({'email': event.target.value});
@@ -35,7 +35,7 @@ class LoginPanel extends Component{
     onLogin(event){
         // PreventDefault: it stop bubbling the event.
         event.preventDefault();
-        
+
         // Now, it will run our code.
         // Take the email and password from the state in the React component
         const email = this.state.email;
@@ -73,10 +73,10 @@ class LoginPanel extends Component{
 class LogoutPanel  extends Component{
     constructor(props){
         super(props);
-        
+
         this.onLogout = this.onLogout.bind(this);
     }
-    
+
     onLogout(event){
         // Remove the cookie when clicking the button
         cookie.remove(cookieAuthentication);
@@ -87,6 +87,7 @@ class LogoutPanel  extends Component{
     render(){
         return(
             <div className="container">
+                <Header />
                 LogOut:<br/>
                 <input type="button" onClick={this.onLogout} />
             </div>
@@ -97,7 +98,7 @@ class LogoutPanel  extends Component{
 export default class Login extends Component {
     constructor(props){
         super(props);
-        
+
         this.isLogged = this.isLogged.bind(this);
         this.onSuccessLogin = this.onSuccessLogin.bind(this);
         this.onSuccessLogout = this.onSuccessLogout.bind(this);
@@ -105,19 +106,19 @@ export default class Login extends Component {
 
     isLogged(){
       // If the cookie is present, return true otherwise false
-      // If the user is log in, cookie.load(cookieAuthentication) will return the cookie string, 
-      // otherwise it will return undefined. 
+      // If the user is log in, cookie.load(cookieAuthentication) will return the cookie string,
+      // otherwise it will return undefined.
       const cookieValue = cookie.load(cookieAuthentication);
-     
+
       const isUserLogged =  typeof( cookieValue ) !== 'undefined';
       return isUserLogged;
     }
-    
+
     // When we login successfully from the system
     onSuccessLogin(){
         this.setState({logged: true});
     }
-    
+
     // When we logout successfully from the system
     onSuccessLogout(){
         this.setState({logged: false});

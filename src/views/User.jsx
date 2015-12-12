@@ -83,8 +83,8 @@ export default class User extends React.Component {
 
     render() {
         return this.isLogged() ?
-            <UserLoggedOut userLogout={this.onSuccessLogout}/> :
-            <UserLoggedIn userLogin={this.onSuccessLogin}/>;
+            <UserLoggedIn userLogout={this.onSuccessLogout}/> :
+            <UserLoggedOut userLogin={this.onSuccessLogin}/>;
     }
 }
 
