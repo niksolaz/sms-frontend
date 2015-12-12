@@ -45,7 +45,7 @@ class LoginPanel extends Component{
             cookie.save(cookieAuthentication, 'thisisasecret');
             // Call the function login in the props
             // sent from the Login component
-            this.props.login();
+            this.props.login(email);
         }
     }
 
@@ -115,8 +115,8 @@ export default class Login extends Component {
     }
 
     // When we login successfully from the system
-    onSuccessLogin(){
-        this.setState({logged: true});
+    onSuccessLogin(email){
+        this.context.history.pushState(null, '/users/' + email)
     }
 
     // When we logout successfully from the system

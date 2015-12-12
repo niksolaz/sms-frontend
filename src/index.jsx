@@ -13,7 +13,6 @@ ReactDOM.render(
         <Route path="/login" component={Login}/>
         <Route path="/users" component={User}>
           <Route path="/users/:username" component={User}/>
-          <Route path="/users/:username/messages" component={User} />
         </Route>
         <Route path="/facebook" component={Facebook}/>
         <Route path="/twitter" component={Twitter}/>
