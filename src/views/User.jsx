@@ -12,10 +12,11 @@ class UserLoggedIn extends Component{
     }
 
     render(){
+        const username = this.props.params.username || "Unknown user";
         return (
             <div className="container">
                 <Header  />
-                <h3>Users</h3>
+                <h3>Users: {username}</h3>
                 <div>
                     <textarea row='100' col='100'></textarea>
                     <br/>
@@ -29,24 +30,13 @@ class UserLoggedIn extends Component{
 class UserLoggedOut extends Component{
     constructor(props){
         super(props);
-
-        this.onChangeUsernameLogOut = this.onChangeUsernameLogOut.bind(this);
-    }
-
-    onChangeUsernameLogOut(){
-      let username = this.props.params.username;
     }
 
     render(){
         return (
             <div className="container">
                 <Header  />
-                <h3>{this.onChangeUsernameLogOut}</h3>
-                <div>
-                    <textarea row='100' col='100'></textarea>
-                    <br/>
-                    <input type='submit' value='send sms'/>
-                </div>
+                <div>You are not logged in </div>
             </div>
         );
     }
@@ -57,8 +47,6 @@ export default class User extends React.Component {
         super(props);
 
         this.isLogged = this.isLogged.bind(this);
-        this.onSuccessLogin = this.onSuccessLogin.bind(this);
-        this.onSuccessLogout = this.onSuccessLogout.bind(this);
     }
 
     isLogged(){
@@ -71,20 +59,10 @@ export default class User extends React.Component {
       return isUserLogged;
     }
 
-    // When we login successfully from the system
-    onSuccessLogin(){
-        this.setState({logged: true});
-    }
-
-    // When we logout successfully from the system
-    onSuccessLogout(){
-        this.setState({logged: false});
-    }
-
     render() {
         return this.isLogged() ?
-            <UserLoggedIn userLogout={this.onSuccessLogout}/> :
-            <UserLoggedOut userLogin={this.onSuccessLogin}/>;
+            <UserLoggedIn /> :
+            <UserLoggedOut />;
     }
 }
 
