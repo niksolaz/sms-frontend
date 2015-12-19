@@ -9,23 +9,24 @@ const cookieAuthentication = 'cookieMonster';
 export default class Facebook extends React.Component {
     constructor(props){
         super(props);
-        
+
         this.isLogged = this.isLogged.bind(this);
+        console.log("faceboook");
     }
 
      isLogged(){
         // If the cookie is present, return true otherwise false
-        // If the user is log in, cookie.load(cookieAuthentication) will return the cookie string, 
-        // otherwise it will return undefined. 
+        // If the user is log in, cookie.load(cookieAuthentication) will return the cookie string,
+        // otherwise it will return undefined.
         const cookieValue = cookie.load(cookieAuthentication);
-       
+
         const isUserLogged =  typeof( cookieValue ) !== 'undefined';
         return isUserLogged;
       }
 
      render() {
           /* Using the ternary operator <clause> ? <statement if clause is true> : <statement if the clause is false>*/
-        return !this.isLogged() ? 
+        return !this.isLogged() ?
             // If it is not logged
             <div className="container">Not logged</div> :
             // If it is logged
@@ -38,9 +39,8 @@ export default class Facebook extends React.Component {
                   <ul>
                     <li>
                     Message user Facebook: <br/>
-                      <textarea row='100' col='100'>
-                        <p>Message</p>
-                      </textarea>
+                    <textarea rows='10' cols='50' >
+                    </textarea>
                     </li>
                   </ul>
                 </div>

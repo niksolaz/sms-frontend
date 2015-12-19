@@ -89,7 +89,7 @@ class LogoutPanel  extends Component{
             <div className="container">
                 <Header />
                 LogOut:<br/>
-                <input type="button" onClick={this.onLogout} />
+                <button className="glyphicon glyphicon-off" type="button" onClick={this.onLogout} />
             </div>
         );
     }

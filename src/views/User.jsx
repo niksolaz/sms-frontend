@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
-import MessageForm from '/MessageForm.jsx';
+import MessageForm from '../components/modules/MessageForm.jsx';
+
 import {Link, PropTypes} from 'react-router';
 
 const cookieAuthentication = 'cookieMonster';
