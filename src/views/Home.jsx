@@ -13,7 +13,9 @@ export default class Home extends React.Component {
         return (
             <div className="container">
                 <Header  />
-                <h3>Home</h3>
+                <div>
+                  <img src="../img/ic_72x72.png" alt="Logo" height="72" width="72"/>
+                </div>
                 <br/>
                 <Link to={'/login'}>Login</Link>
                 <br/>
