@@ -2,6 +2,8 @@ import React from 'react';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
+import FBmessageList from '../components/modules/FBmessageList.jsx';
+
 import {Link, PropTypes} from 'react-router';
 
 const cookieAuthentication = 'cookieMonster';
@@ -42,15 +44,7 @@ export default class Facebook extends React.Component {
                 <h3>Facebook</h3>
                 <br/>
                 <Link to={'/users'}>User</Link>
-                <div>
-                  <ul>
-                    <li>
-                    Message user Facebook: <br/>
-                    <textarea rows='10' cols='50' >
-                    </textarea>
-                    </li>
-                  </ul>
-                </div>
+                <FBmessageList />
             </div>;
     }
 }

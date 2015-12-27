@@ -2,7 +2,7 @@ import React from 'react';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
-import MessageForm from '../components/modules/TWEETmessageList.jsx';
+import TWEETmessageList from '../components/modules/TWEETmessageList.jsx';
 
 import {Link, PropTypes} from 'react-router';
 
