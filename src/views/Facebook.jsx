@@ -28,7 +28,14 @@ export default class Facebook extends React.Component {
           /* Using the ternary operator <clause> ? <statement if clause is true> : <statement if the clause is false>*/
         return !this.isLogged() ?
             // If it is not logged
-            <div className="container">Not logged</div> :
+            <div className="container">
+                <Header />
+                <div>
+                    Facebook Not logged
+                    <br />
+                    Please, go to Login
+                </div>
+            </div> :
             // If it is logged
             <div className="container">
                 <Header  />

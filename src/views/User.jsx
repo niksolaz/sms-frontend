@@ -35,7 +35,11 @@ class UserLoggedOut extends Component{
         return (
             <div className="container">
                 <Header  />
-                <div>You are not logged in </div>
+                <div>
+                    User Not logged
+                    <br />
+                    Please, go to Login
+                </div>
             </div>
         );
     }
