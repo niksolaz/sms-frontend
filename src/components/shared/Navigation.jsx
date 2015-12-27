@@ -40,7 +40,7 @@ export default class Navigation extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="Http://localhost:3000">
                 <img
                     width="24" height="24"
                     alt="Brand"
