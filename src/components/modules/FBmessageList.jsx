@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
-import MessageID from '../shared/messageID.jsx';
+//import MessageID from '../shared/messageID.jsx';
 
 class Read_MessageID extends Component{
   render(){
@@ -52,18 +52,14 @@ class NoRead_MessageID_OUT extends Component{
 export default class FBmessageList extends Component {
   constructor(props){
         super(props);
+        this.isMessage = this.isMessage.bind(this);
   }
-  
-  render(){
+  isMessage(){
     const messageID = this.props.params.messageID;
-    if(this.props.params.messageID){
-      return (
-        <Read_MessageID />
-      );
-    }else{
-      return(
-        <NoRead_MessageID_OUT />
-      );
-    }
+  }
+  render(){
+    return isMessage() ?
+      <Read_MessageID /> :
+      <NoRead_MessageID_OUT />; 
   }
 }

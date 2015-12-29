@@ -4,7 +4,7 @@ export default class messageID extends Component {
   render() {
     return (
       <div>
-         <p>{messageID}</p>
+         <p>single message: {messageID}</p>
       </div>
 
     );
