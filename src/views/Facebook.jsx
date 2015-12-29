@@ -1,14 +1,23 @@
-import React from 'react';
+import React,{Component} from 'react';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
 import FBmessageList from '../components/modules/FBmessageList.jsx';
 
+
 import {Link, PropTypes} from 'react-router';
 
 const cookieAuthentication = 'cookieMonster';
 
-class Message
+class Message extends Component{
+    constructor(props){
+        super(props);
+    }
+    
+    render(){
+        
+    }
+}
 
 export default class Facebook extends React.Component {
     constructor(props){
