@@ -8,6 +8,8 @@ import {Link, PropTypes} from 'react-router';
 
 const cookieAuthentication = 'cookieMonster';
 
+class Message
+
 export default class Facebook extends React.Component {
     constructor(props){
         super(props);

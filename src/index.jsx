@@ -12,15 +12,11 @@ ReactDOM.render(
         <Route path="/" component={Home}/>
         <Route path="/login" component={Login}/>
         <Route path="/users" component={User}>
-          <Route path="/users/:username" component={User}/>
-        </Route>
-        <Route path="/twitter" component={Twitter}>
-          <Route path="/twitter/:messageID" component={Twitter}/>
-        </Route>
-        <Route path="/facebook" component={Facebook}>
-          <Route path="/facebook/:messageID" component={Facebook} />
-        </Route>
-
-
+            <Route path="/users/:username" component={User}/>
+        <Route/>
+        <Route path="/twitter/:messageID" component={Message}/>
+        <Route path="/twitter" component={Twitter}/>
+        <Route path="/facebook/:messageID" component={Message} />
+        <Route path="/facebook" component={Facebook}/>
     </Router>
     , document.getElementById('app'));
