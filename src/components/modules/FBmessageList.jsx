@@ -37,7 +37,7 @@ class NoRead_MessageID_OUT extends Component{
             <tbody>
                 <tr>
                   <td>1</td>
-                  <td><Link to={'facebook/:messageID'} onClick={this.props.someEvent}>message bla bla bla</Link></td>
+                  <td><Link to={'facebook/:messageID'}>message bla bla bla</Link></td>
                   <td>42</td>
                   <td>12</td>
                 </tr>  
@@ -50,17 +50,20 @@ class NoRead_MessageID_OUT extends Component{
 }
 
 export default class FBmessageList extends Component {
-  getInitialState(){
-    eventClick = false;
-  }
-  isMessage(e){
-    this.setState(eventClick= !this.state.eventClick);
-  }
-  render() {
-    return this.isMessage() ?
-      <NoRead_MessageID_OUT someEvent={this.isMessage}/> :
-      <Read_MessageID />;
-
+  constructor(props){
+        super(props);
   }
   
+  render(){
+    const messageID = this.props.params.messageID;
+    if(this.props.params.messageID){
+      return (
+        <Read_MessageID />
+      );
+    }else{
+      return(
+        <NoRead_MessageID_OUT />
+      );
+    }
+  }
 }
