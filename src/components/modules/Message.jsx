@@ -6,7 +6,6 @@ export default class messageID extends Component {
     }
 
 	render() {
-		const messageID = this.props.params.messageID
 		return (
 		  <div>
 		     <p>single message: {messageID}</p>
