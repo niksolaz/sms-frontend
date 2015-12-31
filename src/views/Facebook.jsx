@@ -3,27 +3,11 @@ import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
 import FBmessageList from '../components/modules/FBmessageList.jsx';
-import Message from '../components/modules/Message.jsx';
+
 
 import {Link, PropTypes} from 'react-router';
 
 const cookieAuthentication = 'cookieMonster';
-
-class GetMessage extends Component{
-    constructor(props){
-        super(props);
-        console.log('GetMessage');
-    }
-    
-    render(){
-        const messageID = this.props.params.messageID
-        if(messageID){
-            return ( <Message /> );
-        }else{
-            return ( <FBmessageList /> );
-        }
-    }
-}
 
 export default class Facebook extends React.Component {
     constructor(props){
@@ -61,7 +45,7 @@ export default class Facebook extends React.Component {
                 <h3>Facebook</h3>
                 <br/>
                 <Link to={'/users'}>User</Link>
-                <GetMessage />      
+                <FBmessageList />      
             </div>;
     }
 }
