@@ -25,7 +25,7 @@ export default class FBmessageList extends Component {
         <tbody>
             <tr>
               <td>1</td>
-              <td><Link to={'/facebook/:messageID'}>message bla bla bla</Link></td>
+              <td><Link to={'/facebook/:messageID'}>message bla bla</Link></td>
               <td>42</td>
               <td>12</td>
             </tr>
