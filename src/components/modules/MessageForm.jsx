@@ -13,13 +13,13 @@ export default class MessageForm extends Component {
           </div>
           <div className="row">
             <div className="col-md-2">
-              <SocialButton name="facebook" color="red"/>
+              <SocialButton name="facebook" color="#115aed"/>
             </div>
             <div className="col-md-2">
-              <SocialButton name="twitter" color="blue"/>
+              <SocialButton name="twitter" color="#3498db"/>
             </div>
             <div className="col-md-2">
-              <SocialButton name="google" color="green"/>
+              <SocialButton name="google" color="#e65965"/>
             </div>
           </div>
           <br />
