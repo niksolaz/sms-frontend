@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'; 
+import * as actionCreators from '../actions/authCreator';
+
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
@@ -22,6 +26,7 @@ class LoginPanel extends Component{
         this.onLogin = this.onLogin.bind(this);
     }
 
+
     onChangeEmail(event){
         // Set the email state. It change everytime the onChange method fires in the input
         this.setState({'email': event.target.value});
@@ -40,13 +45,16 @@ class LoginPanel extends Component{
         // Take the email and password from the state in the React component
         const email = this.state.email;
         const password = this.state.password;
+
+        this.props.authenticate(email, password);
+
         // Stupid test
-        if (email === "nicola" && password === "password"){
-            cookie.save(cookieAuthentication, 'thisisasecret');
+        //if (email === "nicola" && password === "password"){
+        //    
             // Call the function login in the props
             // sent from the Login component
-            this.props.login(email);
-        }
+        //    this.props.login(email);
+        //}
     }
 
 
@@ -95,7 +103,7 @@ class LogoutPanel  extends Component{
     }
 }
 
-export default class Login extends Component {
+class Login extends Component {
     constructor(props){
         super(props);
 
@@ -104,18 +112,22 @@ export default class Login extends Component {
         this.onSuccessLogout = this.onSuccessLogout.bind(this);
     }
 
+
     isLogged(){
       // If the cookie is present, return true otherwise false
       // If the user is log in, cookie.load(cookieAuthentication) will return the cookie string,
       // otherwise it will return undefined.
-      const cookieValue = cookie.load(cookieAuthentication);
+      
 
+      const cookieValue = cookie.load(cookieAuthentication);
       const isUserLogged =  typeof( cookieValue ) !== 'undefined';
+
       return isUserLogged;
     }
 
     // When we login successfully from the system
     onSuccessLogin(email){
+        cookie.save(cookieAuthentication);
         this.context.history.pushState(null, '/users/' + email)
     }
 
@@ -127,8 +139,23 @@ export default class Login extends Component {
     render() {
         return this.isLogged() ?
             <LogoutPanel  logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
-            <LoginPanel login={this.onSuccessLogin} />; // User is not logged in. Let him log in
+            <LoginPanel login={this.onSuccessLogin} authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in
     }
 }
 
 Login.contextTypes = { history: PropTypes.history };
+
+
+function mapStateToProps(state){
+  return {
+    auth: state.authInfo 
+  }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        actions: bindActionCreators(actionCreators, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

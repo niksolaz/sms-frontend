@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
-import MessageList from '../components/modules/MessageList.jsx';
+import FacebookMessageList from '../components/modules/FacebookMessageList.jsx';
 
 import {Link, PropTypes} from 'react-router';
 
@@ -44,7 +44,7 @@ export default class Facebook extends React.Component {
                 <h3>Facebook</h3>
                 <br/>
                 <Link to={'/users'}>User</Link>
-                <MessageList social="facebook" />      
+                <FacebookMessageList />      
             </div>;
     }
 }

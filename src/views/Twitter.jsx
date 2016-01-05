@@ -2,7 +2,7 @@ import React from 'react';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
-import MessageList from '../components/modules/MessageList.jsx';
+import TwitterMessageList from '../components/modules/TwitterMessageList.jsx';
 
 import {Link, PropTypes} from 'react-router';
 
@@ -43,7 +43,7 @@ export default class Twitter extends React.Component {
                 <h3>Twitter</h3>
                 <br/>
                 <Link to={'/users'}>User</Link>
-                <MessageList social="twitter" />
+                <TwitterMessageList />
             </div>;
     }
 }
