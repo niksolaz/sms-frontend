@@ -11,7 +11,6 @@ let initialState = {
 };
 
 export default function twitterMessages(state = initialState, action){
-	console.log("Reducer log", state, action);
 	switch (action.type){
 		case GET_TWITTER_MESSAGES_PENDING:
 			return {
