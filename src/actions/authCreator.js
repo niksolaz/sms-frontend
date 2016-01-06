@@ -1,7 +1,9 @@
 import {
 	AUTH_PENDING,
 	AUTH_SUCCESS,
-	AUTH_ERROR
+	AUTH_ERROR,
+	AUTH_LOGOUT_SUCCESS,
+	AUTH_LOGOUT_ERROR
 } from './actionTypes'
 
 import {
@@ -31,6 +33,16 @@ function authenticateError(error){
 	}
 }
 
+function authenticationLogoutSuccess(){
+	return{
+		type: AUTH_LOGOUT_SUCCESS
+	}
+}
+function authenticationLogoutError(){
+	return{
+		type: AUTH_LOGOUT_ERROR
+	}
+} 
 
 export function authenticate(username, password){
 	return (dispatch, getState) => {

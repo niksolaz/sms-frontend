@@ -133,13 +133,14 @@ class Login extends Component {
 
     // When we logout successfully from the system
     onSuccessLogout(){
-        this.setState({logged: false});
+        this.props.actions.logout();
+        this.context.history.pushState(null, '/' );
     }
 
     render() {
         return this.isLogged() ?
             <LogoutPanel  logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
-            <LoginPanel login={this.onSuccessLogin} authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in
+            <LoginPanel authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in
     }
 }
 
