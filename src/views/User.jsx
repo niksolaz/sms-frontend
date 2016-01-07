@@ -1,5 +1,8 @@
 import React,{Component} from 'react';
 import cookie from 'react-cookie';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux'; 
+import * as actionCreators from '../actions/userCreator';
 
 import Header from '../components/modules/Header.jsx';
 import MessageForm from '../components/modules/MessageForm.jsx';
@@ -71,3 +74,17 @@ export default class User extends React.Component {
 }
 
 User.contextTypes = { history: PropTypes.history };
+
+function mapStateToProps(state){
+  return {
+    user: state.userInfo
+  }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        actions: bindActionCreators(actionCreators, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(User);

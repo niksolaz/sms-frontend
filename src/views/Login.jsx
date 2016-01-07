@@ -16,20 +16,20 @@ class LoginPanel extends Component{
 
         // Setting a default state
         this.state = {
-            email: "",
+            username: "",
             password: ""
         };
 
         // We need to bind the methods to the object. Requirement from ES6 classes.
-        this.onChangeEmail = this.onChangeEmail.bind(this);
+        this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onChangePassword = this.onChangePassword.bind(this);
         this.onLogin = this.onLogin.bind(this);
     }
 
 
-    onChangeEmail(event){
+    onChangeUsername(event){
         // Set the email state. It change everytime the onChange method fires in the input
-        this.setState({'email': event.target.value});
+        this.setState({'username': event.target.value});
     }
 
     onChangePassword(event){
@@ -42,18 +42,18 @@ class LoginPanel extends Component{
         event.preventDefault();
 
         // Now, it will run our code.
-        // Take the email and password from the state in the React component
-        const email = this.state.email;
+        // Take the username and password from the state in the React component
+        const username = this.state.username;
         const password = this.state.password;
 
-        this.props.authenticate(email, password);
+        this.props.authenticate(username, password);
 
         // Stupid test
-        //if (email === "nicola" && password === "password"){
+        //if (username === "nicola" && password === "password"){
         //    
             // Call the function login in the props
             // sent from the Login component
-        //    this.props.login(email);
+        //    this.props.login(username);
         //}
     }
 
@@ -64,8 +64,8 @@ class LoginPanel extends Component{
                 <Header  />
                 <h3>Login</h3>
                 <form>
-                email:<br/>
-                <input type="text" name="email" onChange={this.onChangeEmail} />
+                username:<br/>
+                <input type="text" name="username" onChange={this.onChangeUsername} />
                 <br/>
                 password:<br/>
                 <input type="text" name="password" onChange={this.onChangePassword} />
@@ -128,7 +128,7 @@ class Login extends Component {
     // When we login successfully from the system
     onSuccessLogin(email){
         cookie.save(cookieAuthentication);
-        this.context.history.pushState(null, '/users/' + email)
+        this.context.history.pushState(null, '/users/' + username)
     }
 
     // When we logout successfully from the system
@@ -140,7 +140,7 @@ class Login extends Component {
     render() {
         return this.isLogged() ?
             <LogoutPanel  logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
-            <LoginPanel authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in
+            <LoginPanel login={this.onSuccessLogin} authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in
     }
 }
 

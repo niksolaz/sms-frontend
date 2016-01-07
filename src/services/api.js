@@ -88,7 +88,9 @@ export function getFacebookStatus(myId){
 export function login(username, password){
 	return new Promise((resolve, reject) => {
 		const user = _.find(users, {username: username, password: password});
-		if(user){
+		console.log("User Login: ",user.username,user.password);
+		if(user.username && user.password){
+			console.log("Resolve User",user);
 			resolve();
 		}else{
 			reject("Username / password are invalid");
@@ -99,6 +101,7 @@ export function login(username, password){
 export function getUser(username){
 	return new Promise((resolve, reject) => {
 		const user = _.find(users, {username: username});
+		console.log("Get User",user.username );
 		if(user){
 			resolve(user);
 		}else{
