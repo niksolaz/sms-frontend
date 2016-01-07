@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import cookie from 'react-cookie';
 
 const tweets = [
 	{
@@ -14,6 +15,12 @@ const tweets = [
 		retweet: 10,
 		likes: 42
 	},
+	{
+		id:"2",
+		messageText: 'I am Margot , girlfriend of Lupin',
+		retweet: 14,
+		likes: 22
+	},
 ];
 const facebookStatuses = [
 	{
@@ -27,6 +34,12 @@ const facebookStatuses = [
 		messageText: 'Bla bla bla',
 		shares: 22,
 		likes: 4
+	},
+	{
+		id:"5",
+		messageText: 'Hello, I am Dylan..Bob Dylan',
+		shares: 12,
+		likes: 34
 	},
 ];
 
@@ -85,12 +98,23 @@ export function getFacebookStatus(myId){
 	});
 }
 
+export function logout(){
+	return new Promise((resolve, reject) => {
+		const cookieAuthentication = 'cookieMonster';
+		cookie.remove(cookieAuthentication);
+		resolve();
+	});
+}
+
+
 export function login(username, password){
 	return new Promise((resolve, reject) => {
 		const user = _.find(users, {username: username, password: password});
-		console.log("User Login: ",user.username,user.password);
-		if(user.username && user.password){
-			console.log("Resolve User",user);
+		
+		if(user){
+			console.log("User Login: ",user.username,user.password);
+			const cookieAuthentication = 'cookieMonster';
+			cookie.save(cookieAuthentication, 'myBeautifulCookie');
 			resolve();
 		}else{
 			reject("Username / password are invalid");

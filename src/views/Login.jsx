@@ -87,7 +87,7 @@ class LogoutPanel  extends Component{
 
     onLogout(event){
         // Remove the cookie when clicking the button
-        cookie.remove(cookieAuthentication);
+        //cookie.remove(cookieAuthentication);
         // Call the logout function sent in the props from the Login component
         this.props.logout();
     }
@@ -139,8 +139,8 @@ class Login extends Component {
 
     render() {
         return this.isLogged() ?
-            <LogoutPanel  logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
-            <LoginPanel login={this.onSuccessLogin} authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in
+            <LogoutPanel logout={this.onSuccessLogout} /> : // User is already logged. Give a chance to log out.
+            <LoginPanel authenticate={this.props.actions.authenticate}/>; // User is not logged in. Let him log in    
     }
 }
 

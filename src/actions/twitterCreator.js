@@ -37,13 +37,13 @@ function getTweetsSuccess(tweets){
 
 function getTweetMessagePending(){
 	return {
-		type: GET_FACEBOOK_MESSAGE_PENDING
+		type: GET_TWITTER_MESSAGE_PENDING
 	};
 }
 
 function getTweetMessageError(error){
 	return {
-		type : GET_FACEBOOK_MESSAGE_ERROR,
+		type : GET_TWITTER_MESSAGE_ERROR,
 		error
 	};
 }
@@ -51,7 +51,7 @@ function getTweetMessageError(error){
 function getTweetMessageSuccess(message){
 	console.log("Success", message);
 	return {
-		type: GET_FACEBOOK_MESSAGE_SUCCESS,
+		type: GET_TWITTER_MESSAGE_SUCCESS,
 		message
 	}
 }

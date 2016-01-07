@@ -44,6 +44,14 @@ function authenticationLogoutError(){
 	}
 } 
 
+export function logout(){
+	return (dispatch, getState) => {
+		dataService.logout()
+			.then(() => dispatch(authenticationLogoutSuccess()))
+			.catch((error) => dispatch(authenticationLogoutError(error)))
+	};
+}
+
 export function authenticate(username, password){
 	return (dispatch, getState) => {
 		dispatch(authenticatePending());
