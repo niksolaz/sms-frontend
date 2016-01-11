@@ -9,7 +9,9 @@ export default class SocialButton extends Component{
       backgroundColor: this.props.color || "white"
     };
     return(
-        <button name={this.props.name} style={buttonStyle}>
+        
+        <button type="button" name={this.props.name} style={buttonStyle}>
+           <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
           {this.props.name}
         </button>
     );
