@@ -45,17 +45,18 @@ export default class Home extends React.Component {
 
         return (
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-8">
                 <li className="navbar-link">
                   <Link to={'/facebook'}>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Icone.png" />
+                    <img src="http://www.impactconstructionsaskatoon.com/wp/wp-content/uploads/2012/03/Facebook-700x263.jpg" />
                   </Link>
                 </li>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-8"></div>
+            <div className="col-md-8">
                 <li className="navbar-link">
                   <Link to={'/twitter'}>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Twitter_blue_bird_icon.svg/256px-Twitter_blue_bird_icon.svg.png" />
+                    <img src="http://www.novipallavolo.it/images/img_contenuti2/194_twitter_logo_700x263.png" />
                   </Link>
                 </li>
             </div>

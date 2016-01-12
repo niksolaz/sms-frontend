@@ -32,10 +32,16 @@ export default class Facebook extends React.Component {
             // If it is not logged
             <div className="container">
                 <Header />
-                <div>
-                    Facebook Not logged
-                    <br />
-                    Please, go to Login
+                <div className="row">
+                    <div className="col-xs-6 col-md-4"></div>
+                    <div className="col-xs-6 col-md-4">
+                        <h3>
+                        <span className="label label-danger">
+                            Facebook Not Logged, Please Go to Login <span className="glyphicon glyphicon-user"></span>
+                        </span>
+                        </h3>
+                    </div>
+                    <div className="col-xs-6 col-md-4"></div>
                 </div>
             </div> :
             // If it is logged

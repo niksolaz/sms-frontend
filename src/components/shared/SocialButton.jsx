@@ -5,15 +5,16 @@ export default class SocialButton extends Component{
     super(props);
   }
   render(){
-    const buttonStyle ={
-      backgroundColor: this.props.color || "white"
+    const bootstrapStyle ={
+      className: this.props.className || "btn btn-default"
     };
     return(
-        
-        <button type="button" name={this.props.name} style={buttonStyle}>
-           <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-          {this.props.name}
-        </button>
+        <div className="btn-group" role="group">
+          <button type="button" className={bootstrapStyle} value={this.props.value}>
+             <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            {this.props.value}
+          </button>
+        </div>
     );
   }
 }

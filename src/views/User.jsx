@@ -22,7 +22,16 @@ class UserLoggedIn extends Component{
         return (
             <div className="container">
                 <Header  />
-                <h3>Users: {username}</h3>
+                <div className="row">
+                    <div className="col-xs-6 col-md-4"></div>
+                    <div className="col-xs-6 col-md-4">
+                        <h3><span className="label label-success">Hi {username}</span></h3>
+                        <h4>
+                            <span className="label label-default"> Write your message and send it to your favorite social </span>
+                        </h4>
+                    </div>
+                    <div className="col-xs-6 col-md-4"></div>
+                </div>
                 <MessageForm />
             </div>
         );
@@ -38,10 +47,16 @@ class UserLoggedOut extends Component{
         return (
             <div className="container">
                 <Header  />
-                <div>
-                    User Not logged
-                    <br />
-                    Please, go to Login
+                <div className="row">
+                    <div className="col-xs-6 col-md-4"></div>
+                    <div className="col-xs-6 col-md-4">
+                        <h3>
+                        <span className="label label-danger">
+                            You Are Not Logged, Please Go to Login <span className="glyphicon glyphicon-user"></span>
+                        </span>
+                        </h3>
+                    </div>
+                    <div className="col-xs-6 col-md-4"></div>
                 </div>
             </div>
         );
