@@ -4,6 +4,7 @@ import User from './User.jsx';
 import Facebook from './Facebook.jsx';
 import Twitter from './Twitter.jsx';
 import Message from './Message.jsx';
+import Setting from './Setting.jsx';
 
 module.exports = {
 	Home,
@@ -11,5 +12,6 @@ module.exports = {
 	User,
 	Facebook,
 	Twitter,
-	Message
+	Message,
+	Setting
 }

@@ -59,6 +59,9 @@ export default class Navigation extends Component {
                       <span> {loginStatus} </span>
                     </Link>
                   </li>
+                  <li className="navbar-link">
+                    <Link to={'/setting'} className="glyphicon glyphicon-cog"></Link>
+                  </li>
                 </ul>
             </div>
           </div>
