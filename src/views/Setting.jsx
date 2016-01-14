@@ -14,11 +14,11 @@ export default class Setting extends React.Component {
                     <div className="col-xs-6 col-md-4"></div>
                     <div className="col-xs-6 col-md-4">
                     	<h3>Setting</h3>
-						<ul class="list-group">
-						  <li class="list-group-item">Facebook <SettingButton /></li>
-						  <li class="list-group-item">Twitter <SettingButton /></li>
-						  <li class="list-group-item">Google <SettingButton /></li>
-						  <li class="list-group-item">Change Your "Password"</li>
+						<ul className="list-group">
+						  <li className="list-group-item">Facebook <SettingButton /></li>
+						  <li className="list-group-item">Twitter <SettingButton /></li>
+						  <li className="list-group-item">Google <SettingButton /></li>
+						  <li className="list-group-item">Change Your "Password"</li>
 						</ul>
                     </div>
 					<div className="col-xs-6 col-md-4"></div>

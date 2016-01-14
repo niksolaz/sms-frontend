@@ -15,11 +15,11 @@ export default class SocialButton extends Component{
     }
   
   render() {
-    const checked = this.state.checked ? 'checked' : 'unchecked';
+    const status = this.state.checked ? <input type="checkbox" className="ON" checked /> : <input type="checkbox" className="OFF" checked />;
     return (
       <div>
-        <InputSwitch checked={this.state.checked} onChange={this.handleChange}/>
-        <div>{checked}</div>
+        <InputSwitch checked={this.state.checked} onChange={this.handleChange} className={status}/>
       </div>
-    );
+    ); 
   }
+}
