@@ -59,6 +59,7 @@
     "history": "^1.13.1",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
+    "react-bootstrap-switch": "^3.4.1",
     "react-cookie": "^0.4.2",
     "react-dom": "^0.14.3",
     "react-input-switch": "^1.1.0",

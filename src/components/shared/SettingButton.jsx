@@ -1,25 +1,22 @@
 import React, {Component} from 'react';
 
-import InputSwitch from 'react-input-switch';
+
+import Switch from 'react-bootstrap-switch';
+
 
 export default class SocialButton extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      checked : false
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
-  handleChange(checked) {
-      this.setState({ checked: checked });
-    }
-  
+
   render() {
-    const status = this.state.checked ? <input type="checkbox" className="ON" checked /> : <input type="checkbox" className="OFF" checked />;
+    const styleSwitch = {
+      size : 'small' || null,
+      animate : true || false,
+      onColor : 'primary' || 'default',
+      baseClass : 'bootstrap-switch'   
+    }
     return (
-      <div>
-        <InputSwitch checked={this.state.checked} onChange={this.handleChange} className={status}/>
-      </div>
-    ); 
+      <Switch className={styleSwitch} toggleState=true/>
+    );
   }
 }
+
+

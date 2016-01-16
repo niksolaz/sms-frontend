@@ -18,7 +18,7 @@ export default class Setting extends React.Component {
 						  <li className="list-group-item">Facebook <SettingButton /></li>
 						  <li className="list-group-item">Twitter <SettingButton /></li>
 						  <li className="list-group-item">Google <SettingButton /></li>
-						  <li className="list-group-item">Change Your "Password"</li>
+						  <li className="list-group-item">Change Your <Link to={'/password'}>"Password"</Link></li>
 						</ul>
                     </div>
 					<div className="col-xs-6 col-md-4"></div>

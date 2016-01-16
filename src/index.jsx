@@ -5,7 +5,7 @@ import { Router, Route, Link } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import { Provider } from 'react-redux';
 
-import {Home, Login, User, Facebook, Twitter, Message, Setting} from './views';
+import {Home, Login, User, Facebook, Twitter, Message, Setting, ChangePW} from './views';
 
 import configureStore from './store';
 const initialState = {};
@@ -24,6 +24,7 @@ ReactDOM.render(
             <Route path="/twitter" component={Twitter}/>
             <Route path="/facebook" component={Facebook}/>
             <Route path="/:social/:messageID" component={Message} />
+            <Route path="/password" component={ChangePW} />
             <Route path="/setting" component={Setting} />
         </Router>
     </Provider>
