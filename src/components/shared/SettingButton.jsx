@@ -19,7 +19,7 @@ export default class SocialButton extends Component{
       baseClass : 'bootstrap-switch'   
     }
     return (
-      <Switch className={styleSwitch} toggleState=true/>
+      <Switch className={styleSwitch}/>
     );
   }
 }
