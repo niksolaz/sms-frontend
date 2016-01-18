@@ -13,7 +13,7 @@ export default class SettingButton extends Component{
         this.handleChange = ::this.handleChange;
   }
   handleChange(component,state) {
-    this.setState({status: this.state.Status});
+    this.setState({status: !this.state.Status});
   }
   render() {
     return (
@@ -21,8 +21,8 @@ export default class SettingButton extends Component{
           <Switch 
             state={this.state.status}
             size={'small'}
-            onColor={'Primary'}
-            offColor={'Info'}
+            onColor={'primary'}
+            offColor={'info'}
             onChange={this.handleChange}
             handleWidth={30}
             baseClass={'bootstrap-switch'}
