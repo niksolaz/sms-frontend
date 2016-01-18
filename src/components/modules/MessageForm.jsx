@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import SocialButton from '../shared/SocialButton.jsx';
-
-
+//import SocialButton from '../shared/SocialButton.jsx';
+import { Button } from 'react-bootstrap';
 
 export default class MessageForm extends Component {
   render() {
@@ -20,15 +19,10 @@ export default class MessageForm extends Component {
 
               <div className="col-xs-6 col-md-4"></div>
               <div className="col-xs-6 col-md-4">
-                  
-                    <SocialButton className="btn btn-primary" value="Facebook"/>
-                  
-                    <SocialButton className="btn btn-info" value="Twitter " />
-                  
-                    <SocialButton className="btn btn-danger" value="Google  " />
-                
-                    <input type='submit' className="btn btn-default" value='SHARE'/>
-
+                    <Button type='button' bsStyle="primary" bsSize="small">Facebook</Button>        
+                    <Button type='button' bsStyle="info" bsSize="small">Twitter </Button>   
+                    <Button type='button' bsStyle="danger" bsSize="small">Google  </Button> 
+                    <Button type='submit' bsStyle="default" bsSize="small">Share   </Button>
               </div>
               <div className="col-xs-6 col-md-4"></div>
 

@@ -4,22 +4,31 @@ import React, {Component} from 'react';
 import Switch from 'react-bootstrap-switch';
 
 
-export default class SocialButton extends Component{
+export default class SettingButton extends Component{
   constructor(props){
-    super(props);
+        super(props);
+        this.state= {
+          status: false 
+        };
+        this.handleChange = ::this.handleChange;
+  }
+  handleChange(component,state) {
+    this.setState({status: this.state.Status});
   }
   render() {
-    const styleSwitch = {
-      size : 'small',
-      animate : true,
-      onColor : 'primary',
-      offColor: 'default',
-      onText: 'ON',
-      offText: 'OFF',
-      baseClass : 'bootstrap-switch'   
-    }
     return (
-      <Switch className={styleSwitch}/>
+      
+          <Switch 
+            state={this.state.status}
+            size={'small'}
+            onColor={'Primary'}
+            offColor={'Info'}
+            onChange={this.handleChange}
+            handleWidth={30}
+            baseClass={'bootstrap-switch'}
+          />
+        
+      
     );
   }
 }

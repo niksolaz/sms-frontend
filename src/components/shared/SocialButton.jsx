@@ -1,4 +1,9 @@
+// currently disabled by MessageForm.jsx because supported by Button-React library 
+
+/*
 import React, {Component} from 'react';
+
+import { Button } from 'react-bootstrap';
 
 export default class SocialButton extends Component{
   constructor(props){
@@ -6,15 +11,17 @@ export default class SocialButton extends Component{
   }
   render(){
     const bootstrapStyle ={
-      className: this.props.className || "btn btn-default"
+      bsStyle: this.props.bsStyle,
+      type: this.props.type 
     };
     return(
-        <div className="btn-group" role="group">
-          <button type="button" className={bootstrapStyle} value={this.props.value}>
+        
+          <Button className={bootstrapStyle} value={this.props.value}>
              <span className="glyphicon glyphicon-envelope" aria-hidden="true"></span>
             {this.props.value}
-          </button>
-        </div>
+          </Button>
+        
     );
   }
 }
+*/
