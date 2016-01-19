@@ -15,17 +15,17 @@ export default class Setting extends React.Component {
                     <div className="col-xs-6 col-md-4">
                     	<h3>Setting</h3>
 						<ul className="list-group">
-						  <li className="list-group-item">Facebook
+						  <li className="list-group-item">
 							  <div className="container">
-							  	<SettingButton />
+							  	<SettingButton text="Facebook"/>
 							  </div>
 						  </li>
-						  <li className="list-group-item">Twitter 
+						  <li className="list-group-item"> 
 							  <div className="container">
-							  	<SettingButton />
+							  	<SettingButton text="Twitter"/>
 							  </div>
 						  </li>
-						  <li className="list-group-item">Google 
+						  <li className="list-group-item"> 
 						  	<div className="container">
 						  		<SettingButton />
 						  	</div>

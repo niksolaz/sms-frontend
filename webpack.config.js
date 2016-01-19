@@ -18,7 +18,8 @@ var plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     'process.env.API_URL': JSON.stringify(process.env.API_URL)
-  })
+  }),
+  new webpack.IgnorePlugin(new RegExp('node-sass'))
 ];
 
 if (!isProduction) {
@@ -66,7 +67,8 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.scss$/,
-      loader: 'style!css!autoprefixer!sass'
+      loader: !isProduction ? 'style-loader!css-loader!autoprefixer!sass' : 
+      'css-loader!autoprefixer!sass'
     }]
   }
 };

@@ -66,6 +66,7 @@
     "react-input-switch": "^1.1.0",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0",
+    "react-toggle": "^2.0.1",
     "redux": "^3.0.4",
     "redux-thunk": "^1.0.0"
   },
