@@ -6,6 +6,7 @@ import * as actionCreators from '../actions/authCreator';
 import cookie from 'react-cookie';
 
 import Header from '../components/modules/Header.jsx';
+import { Button } from 'react-bootstrap';
 import {Link, PropTypes} from 'react-router';
 
 const cookieAuthentication = 'cookieMonster';
@@ -96,8 +97,20 @@ class LogoutPanel  extends Component{
         return(
             <div className="container">
                 <Header />
-                LogOut:<br/>
-                <button className="glyphicon glyphicon-off" type="button" onClick={this.onLogout} />
+                <div className="row">
+                    <div className="col-xs-6 col-md-4"></div>
+                    <div className="col-xs-6 col-md-3">
+                        <div className="alert alert-warning">
+                            <h3> 
+                                <span className="glyphicon glyphicon-user">
+                                    Log Out :
+                                    <Button className="glyphicon glyphicon-off" bsStyle="danger" bsSize="large" type="button" onClick={this.onLogout} />
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div className="col-xs-6 col-md-4"></div>
+                </div>
             </div>
         );
     }
